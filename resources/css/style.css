@@ -1,0 +1,630 @@
+/* Font install */
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v12/zhcz-_WihjSQC0oHJ9TCYAzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v12/IQHow_FEYlDC4Gzy_m8fcmaVI6zN22yiurzcBKxPjFE.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+/* Global styling */
+
+
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 18px;
+	font-family: Montserrat, sans-serif;
+	color: darkslategrey;
+}
+
+body {
+	margin: 0 auto;
+
+}
+
+.container {
+	display: flex;
+	padding: 2.5rem 2rem;
+	
+}
+
+.left-column {
+	max-width: 60%;
+}
+
+.left-column img {
+	width: 100%;
+}
+
+.right-column {
+	width: 40%;
+	padding: 0 2rem; /* 32px */
+}	
+
+h1 {
+	font-size: 3rem;
+	line-height: 1.25;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	transition: font-size 0.5s linear;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-bottom: 0.5rem;
+	font-weight: bold;
+}
+
+p {
+	line-height: 1.4;
+	color: dimgrey;
+	
+}
+
+a {
+	color: darkslategrey;
+	text-decoration: none;
+}
+
+a:hover {
+	color: blue;
+	transition: all 200ms linear 0s;
+}
+
+a:active {
+	color: rgb(0, 0, 225);
+	transition: all 200ms ease-in 0s;
+}
+
+.image-container img {
+	width: 100%;
+	
+}
+
+/* Header styling */
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	height: 4rem; /* 64px */
+	
+	background-color: white;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	margin-left: 1.5rem; /* 24px */
+}
+
+.logo-icon {
+	display: none;
+}
+
+.logo svg {
+	height: 2rem;
+	fill: darkslategrey;
+	transition: all 200ms linear 0s;
+}
+
+.logo svg:hover {
+	fill: blue;
+	transition: all 200ms linear 0s;
+}
+
+
+/* Nav styling */
+
+nav {
+	display: flex;
+	align-items: center;
+	margin-right: 2rem; /* 32px */
+	
+}
+
+nav li {
+	display: inline-block;
+	margin-right: 1rem;
+}
+
+nav a {
+	transition: all 200ms linear 0s;
+}
+
+nav a:hover {
+	color: blue;
+	transition: all 200ms linear 0s;
+}
+
+
+.mobile-nav {
+	display: none;
+}
+
+.mobile-nav svg {
+	height: 2rem;
+	fill: darkslategrey;
+	transition: all 200ms linear 0s;
+}
+
+.mobile-nav svg:hover {
+	fill: blue;
+	transition: all 200ms linear 0s;
+}
+
+/* Intro styling */
+
+.intro { 
+	padding-top: 6rem;
+	align-items: center;
+	background-color: lightgrey;
+}
+
+
+.intro p {
+	font-size: 1.5rem;
+	margin: 2rem 0;
+	
+}
+
+.intro a {
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	color: white;
+	background-color: darkslategrey;
+	padding: 0.5rem 2.5rem;
+	
+}
+
+.intro a:hover {
+	background-color: blue;
+	transition: background-color 300ms ease-in;
+}
+
+intro a:active {
+	color: rgb(0, 0, 200);
+	transition: all 200ms ease-in 0s;
+}
+
+/* About styling */
+
+.about h1 {
+	margin-top: 2rem;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	margin-left: 1.5rem;  /* 24px */
+	padding: 0;
+	
+}
+
+.info-item {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 1rem;
+	border-bottom: solid 1px lightgrey;
+	border-left: solid 1px lightgrey;
+	transition: background-color 500ms linear;
+
+}
+
+.info-item:first-child {
+	border-top: solid 1px lightgrey;
+}
+
+.info-item:hover {
+	background-color: lightgrey;
+	transition: background-color 500ms linear;
+}
+
+
+.info-item .image-container {
+	width: 35%;
+}
+
+.info-item .mobile-image {
+	display: none;
+}
+
+.info-item .content {
+	width: 65%;
+	padding: 0 1rem;
+}
+
+.info-item p {
+	padding: 0.5rem 0;
+}
+
+/* Learning styling */
+
+.learning { 
+	background-color: lightgrey;
+	padding: 2.5rem 2rem;
+	
+}
+
+.learning h1 {
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.courses {
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: flex-start;
+	
+}
+
+.course {
+	width: 32%;
+	margin-bottom: 2rem;
+	background-color: white;
+}
+
+
+.course-content {
+	padding: 1rem 1rem 1.5rem 1rem;
+	border-top: solid 0.5rem white;
+}
+
+
+.course-content:hover {
+	border-top: solid 0.5rem blue;
+	color: blue;
+	transition: all 500ms ease-in;
+}
+
+.course-sub {
+	text-transform: uppercase;
+	color: darkgrey;
+	margin-bottom: 0.5rem;
+}
+
+
+/* Thesis styling */
+
+.thesis h1 {
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.thesis-content {
+	margin-top: 2rem;
+}
+
+.blog-posts {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	margin-left: 1.5rem;  /* 24px */
+	padding: 0;
+
+}
+
+.blog-post {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 1rem;
+}
+
+.blog-post:first-child {
+	background-color: lightgrey;
+}
+
+.blog-post .image-container {
+	width: 35%;
+}
+
+.blog-post .content {
+	width: 65%;
+	padding: 1rem;
+}
+
+.blog-post p {
+	padding: 0.5rem 0;
+}
+
+/* Footer styling */
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	font-size: 0.75rem;
+	color: darkslategrey;
+	border-top: solid 1px lightgrey;
+	
+}
+
+.terms {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.terms li {
+	display: inline-block;
+}
+
+@media screen and (max-width: 1575px) {
+	h1 {
+		font-size: 2.5rem;
+		transition: font-size 0.5s linear;
+	}
+}
+
+@media screen and (max-width: 1320px) {
+	.left-column {
+		max-width: 50%;
+		transition: max-width 0.5s linear;
+	}
+	
+	.right-column {
+		width: 50%;
+		transition: max-width 0.5s linear;
+	}
+}
+
+@media screen and (max-width: 1145px) {
+	.info-item .image-container {
+		width: 30%;
+		transition: width 0.5s linear;
+	}
+	
+	.info-item .content {
+		width: 70%;
+		transition: width 0.5s linear;
+	}
+	
+}
+
+@media screen and (max-width: 1075px) {
+	
+	
+	.about .right-column {
+		width: 100%;
+	}
+	
+	.info {
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0;
+		
+	}
+	
+	.info-item {
+		flex-direction: column;
+		width: 27.5%;
+		align-content: center;
+		border: solid 1px lightgrey;
+	}
+	
+	
+	.info-item .image-container {
+		display: none;
+		transition: all 0.5s linear;
+	}
+	
+	.info-item .mobile-image {
+		display: flex;
+		width: 100%;
+		transition: all 0.5s linear;
+	}
+	
+	.mobile-image img {
+		width: 100%;
+		height: auto;
+
+	}
+	
+	.info-item .content {
+		width: 100%;
+		margin: 1rem;
+		transition: all 0.5s linear;
+	}
+
+	aside {
+		display: none;
+	}
+	
+	.thesis .left-column {
+		max-width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	.thesis-video, .thesis-content {
+		width: 48%;
+		margin: 0;
+	}
+	
+	.thesis .right-column {
+		display: none;
+	}
+	
+	.course {
+		width: 48%;
+	}
+	
+}
+
+@media screen and (max-width: 995px) {
+	
+	.intro {
+		flex-direction: column;
+	}
+	
+	.intro .left-column {
+		max-width: 100%;
+	}
+	
+	.intro .right-column {
+		width: 90%;
+		margin: 2rem;
+		text-align: center;
+	}
+	
+	.intro, .thesis {
+		padding: 0;
+	}
+	
+	.thesis .left-column {
+		flex-direction: column;
+		
+	}
+	
+	.thesis-video {
+		width: 100%;
+		margin-top: 1rem;
+	}
+	
+	.thesis-content {
+		margin: 1rem;
+		width: 90%;
+		text-align: center;
+	}
+	
+}
+
+@media screen and (max-width: 850px) {
+	
+	.desktop-nav {
+		display: none;
+	}
+	
+	
+	.mobile-nav {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 2rem;
+	}
+	
+	.container {
+		padding: 0;
+	}
+	
+	.logo-full {
+		display: none;
+	}
+	
+	.logo-icon {
+		display: flex;
+	}
+	
+	.intro h1 {
+		font-size: 2rem;
+		transition: all 0.5s linear;
+	}
+	
+	.info {
+		
+		flex-direction: column;
+		border: none;
+
+	}
+	
+	
+	.info-item {
+		flex-direction: column;
+		width: 100%;
+		border: none;
+		box-sizing: border-box;
+		
+	}
+	
+	.info-item:first-child {
+		border: none;
+	}
+	
+	.mobile-image {
+		width: 100%;
+	}
+	
+	.info-item .content {
+		width: 100%;
+		text-align: center;
+		padding-top: 1.5rem;
+		
+	}
+	
+	.learning {
+		padding: 2rem 1rem;
+		background-color: white;
+		border-top: solid 1px lightgrey;
+	}
+	
+	.learning h1, .thesis h1 {
+		margin-top: 0;
+		font-size: 2rem;
+		transition: all 0.5s linear;
+
+	}
+	
+	.courses {
+		flex-direction: column;		
+		
+	}
+	
+	.course {
+		width: 100%;
+		background-color: lightgrey;
+		margin-bottom: 0.5rem;
+
+	}
+	
+	.course .image-container {
+		display: none;
+	}
+	
+	.thesis {
+		border-top: solid 1px lightgrey;
+		padding-top: 2rem;
+	}
+	
+	
+	.thesis-content {
+		display: none;
+	}
+	
+	.terms {
+		display: none;
+	}
+	
+	.copyright {
+		width: 100%;		
+	}
+	
+	footer {
+		align-items: center;
+		text-align: center;
+
+	}
+	
+
+}
